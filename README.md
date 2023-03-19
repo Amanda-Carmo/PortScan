@@ -16,3 +16,14 @@ Realizar uma pesquisa dos módulos e bibliotecas que permitem o desenvolvimento 
 
 •	Existem diversos projetos e documentações relacionados com esta atividade.
 Aproveite para analisar os códigos já desenvolvidos para teu projeto.
+
+___
+após clonar o repositório,
+
+- `cd PortScan`
+- `pip install requirements.txt`
+
+- Para rodar o programa, use: `python portscan.py`
+
+O programa pedirá suas preferências.
+É possível escanear um host e uma rede, obtendo as portas que estão abertas e os serviços.
