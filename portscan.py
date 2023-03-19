@@ -91,9 +91,18 @@ class Scanner:
         
         if self.start_port > self.end_port:
             self.console.print(f"[bold red]A porta inicial deve ser menor que a final[/bold red]")
+            return   
+
+        # Checando se o host é válido
+        try:
+            socket.gethostbyname(self.target_host)
+        except socket.gaierror:
+            self.console.print(f"[bold red]O host {self.target_host} não é válido[/bold red]")
             return
+     
 
         # Imprime informações na tela
+        print("")
         self.console.print(f"[bold blue]Escaneando o host:[/bold blue] {self.target_host}")
         self.console.print(f"[bold blue]Portas a serem escaneadas:[/bold blue] {self.start_port} - {self.end_port}")
         print("")
@@ -140,8 +149,14 @@ class Scanner:
 
         
     def run(self):
+
+        # A qualquer momento, para sair do programa, precione CTRL + C"
+        self.console.print("[blue]A qualquer momento, para sair do programa, precione CTRL + C[/blue]", justify="center")
+        print("")
+
+
         # Opções de escaneamento
-        options = ["1 - Escanear um host", "2 - Escanear uma rede"]
+        options = ["1 - Escanear um host", "2 - Escanear uma rede", "0 - Sair"]
 
         # Imprime as opções na tela
         self.console.print("Escolha uma opção digitando o número correspondente", style="bold blue")
@@ -183,6 +198,10 @@ class Scanner:
 
             # Realiza o escaneamento
             self.network_scan(self.target_host, cidr, self.start_port, self.end_port)
+
+        elif option == "0":
+            self.console.print("Saindo...", style="bold blue")
+            exit()
 
         else:
             self.console.print("Opção inválida!", style="bold red")
