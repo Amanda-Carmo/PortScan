@@ -18,7 +18,7 @@ Realizar uma pesquisa dos módulos e bibliotecas que permitem o desenvolvimento 
 Aproveite para analisar os códigos já desenvolvidos para teu projeto.
 
 ___
-após clonar o repositório,
+Após clonar o repositório,
 
 - `cd PortScan`
 - `pip install requirements.txt`
