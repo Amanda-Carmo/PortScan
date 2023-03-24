@@ -126,7 +126,7 @@ class Scanner:
                 sock.close()
 
             else:
-                self.console.print(f"[bold red]Porta {port} fechada[/bold red]")
+                # self.console.print(f"[bold red]Porta {port} fechada[/bold red]")
 
     def network_scan(self, target_host, cidr, start_port, end_port):
         # Armazenando o endereço IP do host alvo e o range de portas a serem escaneadas
