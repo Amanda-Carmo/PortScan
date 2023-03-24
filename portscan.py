@@ -111,7 +111,7 @@ class Scanner:
         for port in range(self.start_port, self.end_port + 1):
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-            print(f"Escaneando a porta {port}...")
+            # print(f"Escaneando a porta {port}...")
 
             # Verifica se a porta está aberta
             if sock.connect_ex((self.target_host, port)) == 0:
