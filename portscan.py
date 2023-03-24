@@ -125,7 +125,7 @@ class Scanner:
                 # Fecha a conexão
                 sock.close()
 
-            else:
+            # else:
                 # self.console.print(f"[bold red]Porta {port} fechada[/bold red]")
 
     def network_scan(self, target_host, cidr, start_port, end_port):
